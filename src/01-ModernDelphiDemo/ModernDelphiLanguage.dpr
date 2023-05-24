@@ -5,7 +5,8 @@ uses
   FormMain in 'FormMain.pas' {FormDemoMain},
   DemoConsole in 'DemoConsole.pas',
   Demo.Generics.ThreadQueue in 'Demo.Generics.ThreadQueue.pas',
-  Demo.Anonymous.DataSetForEach in 'Demo.Anonymous.DataSetForEach.pas';
+  Demo.Anonymous.DataSetForEach in 'Demo.Anonymous.DataSetForEach.pas',
+  Demo.Spring4D.Collections in 'Demo.Spring4D.Collections.pas';
 
 {$R *.res}
 

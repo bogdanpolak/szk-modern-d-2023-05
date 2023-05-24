@@ -148,6 +148,7 @@ object FormDemoMain: TFormDemoMain
       Align = alTop
       Caption = 'IList: Employee Collection'
       TabOrder = 3
+      OnClick = btnDemoEmployeeCollectionClick
     end
     object btnDemoWeatherDictionary: TButton
       AlignWithMargins = True
@@ -158,6 +159,7 @@ object FormDemoMain: TFormDemoMain
       Align = alTop
       Caption = 'IDictionary: Weather Client'
       TabOrder = 4
+      OnClick = btnDemoWeatherDictionaryClick
     end
     object btnRunTEnumDemo: TButton
       AlignWithMargins = True

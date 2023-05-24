@@ -34,6 +34,8 @@ type
     procedure btnDemoThreadedQueueClick(Sender: TObject);
     procedure btnDemoObjectContainerClick(Sender: TObject);
     procedure btnDemoDataSetForEachClick(Sender: TObject);
+    procedure btnDemoEmployeeCollectionClick(Sender: TObject);
+    procedure btnDemoWeatherDictionaryClick(Sender: TObject);
   private
     fConsole: IConsole;
     fDemoThreadQueue: IDemoThreadQueue;
@@ -47,7 +49,11 @@ implementation
 {$R *.dfm}
 
 uses
-  Demo.Generics.ObjectContainer;
+  Demo.Generics.ObjectContainer,
+  Demo.Spring4D.Collections;
+
+{ ------------------------------------------------------- }
+{ RTL: Generics, Anonymous Methods }
 
 procedure TFormDemoMain.btnDemoDataSetForEachClick(Sender: TObject);
 begin
@@ -62,6 +68,19 @@ end;
 procedure TFormDemoMain.btnDemoThreadedQueueClick(Sender: TObject);
 begin
   fDemoThreadQueue.Execute;
+end;
+
+{ ------------------------------------------------------- }
+{ Spring4D: Collections }
+
+procedure TFormDemoMain.btnDemoEmployeeCollectionClick(Sender: TObject);
+begin
+  TSpringCollectionsDemo.RunEmployeeCollection(fConsole);
+end;
+
+procedure TFormDemoMain.btnDemoWeatherDictionaryClick(Sender: TObject);
+begin
+  TSpringCollectionsDemo.RunWeatherDictionary(fConsole);
 end;
 
 procedure TFormDemoMain.FormCreate(Sender: TObject);
