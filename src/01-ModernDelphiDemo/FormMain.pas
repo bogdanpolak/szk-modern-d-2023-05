@@ -9,17 +9,17 @@ uses
   System.Classes,
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls,
   Vcl.ExtCtrls,
+  System.Generics.Collections,
   {-}
-  DemoConsole;
+  DemoConsole,
+  Demo.Generics.ThreadQueue;
 
 type
   TFormDemoMain = class(TForm)
     PanelCommands: TPanel;
     btnDemoThreadedQueue: TButton;
-    btnDemoSuperObject: TButton;
     btnDemoObjectContainer: TButton;
     btnDemoDataSetForEach: TButton;
-    btnDemoAnonymousThread: TButton;
     btnDemoEmployeeCollection: TButton;
     btnDemoWeatherDictionary: TButton;
     btnRunTEnumDemo: TButton;
@@ -30,9 +30,11 @@ type
     Panel4: TPanel;
     btnDemoLazyVariable: TButton;
     procedure FormCreate(Sender: TObject);
+    procedure btnDemoThreadedQueueClick(Sender: TObject);
+    procedure btnDemoObjectContainerClick(Sender: TObject);
   private
     fConsole: IConsole;
-  public
+    fDemoThreadQueue: IDemoThreadQueue;
   end;
 
 var
@@ -42,10 +44,24 @@ implementation
 
 {$R *.dfm}
 
+uses
+  Demo.Generics.ObjectContainer;
+
+procedure TFormDemoMain.btnDemoObjectContainerClick(Sender: TObject);
+begin
+  TObjectContainer.Run(fConsole, Self);
+end;
+
+procedure TFormDemoMain.btnDemoThreadedQueueClick(Sender: TObject);
+begin
+  fDemoThreadQueue.Execute;
+end;
+
 procedure TFormDemoMain.FormCreate(Sender: TObject);
 begin
   ReportMemoryLeaksOnShutdown := True;
   fConsole := TDemoInitializer.Init(Self);
+  fDemoThreadQueue := TDemoThreadQueue.Create(fConsole);
 end;
 
 end.

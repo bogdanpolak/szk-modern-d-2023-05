@@ -103,10 +103,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="DemoConsole.pas"/>
-        <DCCReference Include="SuperObjects\superdate.pas"/>
-        <DCCReference Include="SuperObjects\superobject.pas"/>
-        <DCCReference Include="SuperObjects\supertimezone.pas"/>
-        <DCCReference Include="SuperObjects\supertypes.pas"/>
+        <DCCReference Include="Demo.Generics.ThreadQueue.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

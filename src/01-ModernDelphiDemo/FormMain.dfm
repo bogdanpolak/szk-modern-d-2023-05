@@ -41,7 +41,7 @@ object FormDemoMain: TFormDemoMain
       Font.Style = [fsBold]
       ParentBackground = False
       ParentFont = False
-      TabOrder = 11
+      TabOrder = 9
     end
     object btnDemoThreadedQueue: TButton
       AlignWithMargins = True
@@ -52,31 +52,24 @@ object FormDemoMain: TFormDemoMain
       Align = alTop
       Caption = 'Threaded Queue'
       TabOrder = 0
+      OnClick = btnDemoThreadedQueueClick
     end
-    object btnDemoSuperObject: TButton
+    object btnDemoObjectContainer: TButton
       AlignWithMargins = True
       Left = 4
       Top = 60
       Width = 177
       Height = 25
       Align = alTop
-      Caption = 'SuperObject'
-      TabOrder = 1
-    end
-    object btnDemoObjectContainer: TButton
-      AlignWithMargins = True
-      Left = 4
-      Top = 91
-      Width = 177
-      Height = 25
-      Align = alTop
       Caption = 'Object Container'
-      TabOrder = 2
+      TabOrder = 1
+      OnClick = btnDemoObjectContainerClick
+      ExplicitTop = 91
     end
     object Panel2: TPanel
       AlignWithMargins = True
       Left = 4
-      Top = 129
+      Top = 98
       Width = 177
       Height = 22
       Margins.Top = 10
@@ -92,12 +85,13 @@ object FormDemoMain: TFormDemoMain
       Font.Style = [fsBold]
       ParentBackground = False
       ParentFont = False
-      TabOrder = 12
+      TabOrder = 10
+      ExplicitTop = 129
     end
     object Panel3: TPanel
       AlignWithMargins = True
       Left = 4
-      Top = 317
+      Top = 255
       Width = 177
       Height = 22
       Margins.Top = 10
@@ -113,32 +107,24 @@ object FormDemoMain: TFormDemoMain
       Font.Style = [fsBold]
       ParentBackground = False
       ParentFont = False
-      TabOrder = 14
-    end
-    object btnDemoAnonymousThread: TButton
-      AlignWithMargins = True
-      Left = 4
-      Top = 154
-      Width = 177
-      Height = 25
-      Align = alTop
-      Caption = 'Anonymous Thread'
-      TabOrder = 3
+      TabOrder = 12
+      ExplicitTop = 317
     end
     object btnDemoDataSetForEach: TButton
       AlignWithMargins = True
       Left = 4
-      Top = 185
+      Top = 123
       Width = 177
       Height = 25
       Align = alTop
       Caption = 'DataSet For Each'
-      TabOrder = 4
+      TabOrder = 2
+      ExplicitTop = 185
     end
     object Panel4: TPanel
       AlignWithMargins = True
       Left = 4
-      Top = 223
+      Top = 161
       Width = 177
       Height = 22
       Margins.Top = 10
@@ -154,67 +140,74 @@ object FormDemoMain: TFormDemoMain
       Font.Style = [fsBold]
       ParentBackground = False
       ParentFont = False
-      TabOrder = 13
+      TabOrder = 11
+      ExplicitTop = 223
     end
     object btnDemoEmployeeCollection: TButton
       AlignWithMargins = True
       Left = 4
-      Top = 248
+      Top = 186
       Width = 177
       Height = 25
       Align = alTop
       Caption = 'IList: Employee Collection'
-      TabOrder = 5
+      TabOrder = 3
+      ExplicitTop = 248
     end
     object btnDemoWeatherDictionary: TButton
       AlignWithMargins = True
       Left = 4
-      Top = 279
+      Top = 217
       Width = 177
       Height = 25
       Align = alTop
       Caption = 'IDictionary: Weather Client'
-      TabOrder = 6
+      TabOrder = 4
+      ExplicitTop = 279
     end
     object btnRunTEnumDemo: TButton
       AlignWithMargins = True
       Left = 4
-      Top = 342
+      Top = 280
       Width = 177
       Height = 25
       Align = alTop
       Caption = 'TEnum<> Demo'
-      TabOrder = 7
+      TabOrder = 5
+      ExplicitTop = 342
     end
     object btnNullableDemo: TButton
+      AlignWithMargins = True
+      Left = 4
+      Top = 311
+      Width = 177
+      Height = 25
+      Align = alTop
+      Caption = 'Nullable<> Demo'
+      TabOrder = 6
+      ExplicitTop = 373
+    end
+    object btnTupleDemo: TButton
       AlignWithMargins = True
       Left = 4
       Top = 373
       Width = 177
       Height = 25
       Align = alTop
-      Caption = 'Nullable<> Demo'
-      TabOrder = 8
-    end
-    object btnTupleDemo: TButton
-      AlignWithMargins = True
-      Left = 4
-      Top = 435
-      Width = 177
-      Height = 25
-      Align = alTop
       Caption = 'Tuple<> Demo'
-      TabOrder = 10
+      TabOrder = 8
+      ExplicitTop = 435
     end
     object btnDemoLazyVariable: TButton
       AlignWithMargins = True
       Left = 4
-      Top = 404
+      Top = 342
       Width = 177
       Height = 25
       Align = alTop
       Caption = 'ILazy<>: Lazy Variable'
-      TabOrder = 9
+      TabOrder = 7
+      ExplicitTop = 404
     end
   end
 end
