@@ -12,7 +12,8 @@ uses
   System.Generics.Collections,
   {-}
   DemoConsole,
-  Demo.Generics.ThreadQueue;
+  Demo.Generics.ThreadQueue,
+  Demo.Anonymous.DataSetForEach;
 
 type
   TFormDemoMain = class(TForm)
@@ -32,6 +33,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure btnDemoThreadedQueueClick(Sender: TObject);
     procedure btnDemoObjectContainerClick(Sender: TObject);
+    procedure btnDemoDataSetForEachClick(Sender: TObject);
   private
     fConsole: IConsole;
     fDemoThreadQueue: IDemoThreadQueue;
@@ -46,6 +48,11 @@ implementation
 
 uses
   Demo.Generics.ObjectContainer;
+
+procedure TFormDemoMain.btnDemoDataSetForEachClick(Sender: TObject);
+begin
+  TAnonymousDataSetForEach.Run(fConsole, Self);
+end;
 
 procedure TFormDemoMain.btnDemoObjectContainerClick(Sender: TObject);
 begin

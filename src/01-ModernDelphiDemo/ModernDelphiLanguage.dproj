@@ -104,6 +104,7 @@
         </DCCReference>
         <DCCReference Include="DemoConsole.pas"/>
         <DCCReference Include="Demo.Generics.ThreadQueue.pas"/>
+        <DCCReference Include="Demo.Anonymous.DataSetForEach.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

@@ -64,7 +64,6 @@ object FormDemoMain: TFormDemoMain
       Caption = 'Object Container'
       TabOrder = 1
       OnClick = btnDemoObjectContainerClick
-      ExplicitTop = 91
     end
     object Panel2: TPanel
       AlignWithMargins = True
@@ -86,7 +85,6 @@ object FormDemoMain: TFormDemoMain
       ParentBackground = False
       ParentFont = False
       TabOrder = 10
-      ExplicitTop = 129
     end
     object Panel3: TPanel
       AlignWithMargins = True
@@ -108,7 +106,6 @@ object FormDemoMain: TFormDemoMain
       ParentBackground = False
       ParentFont = False
       TabOrder = 12
-      ExplicitTop = 317
     end
     object btnDemoDataSetForEach: TButton
       AlignWithMargins = True
@@ -119,7 +116,7 @@ object FormDemoMain: TFormDemoMain
       Align = alTop
       Caption = 'DataSet For Each'
       TabOrder = 2
-      ExplicitTop = 185
+      OnClick = btnDemoDataSetForEachClick
     end
     object Panel4: TPanel
       AlignWithMargins = True
@@ -141,7 +138,6 @@ object FormDemoMain: TFormDemoMain
       ParentBackground = False
       ParentFont = False
       TabOrder = 11
-      ExplicitTop = 223
     end
     object btnDemoEmployeeCollection: TButton
       AlignWithMargins = True
@@ -152,7 +148,6 @@ object FormDemoMain: TFormDemoMain
       Align = alTop
       Caption = 'IList: Employee Collection'
       TabOrder = 3
-      ExplicitTop = 248
     end
     object btnDemoWeatherDictionary: TButton
       AlignWithMargins = True
@@ -163,7 +158,6 @@ object FormDemoMain: TFormDemoMain
       Align = alTop
       Caption = 'IDictionary: Weather Client'
       TabOrder = 4
-      ExplicitTop = 279
     end
     object btnRunTEnumDemo: TButton
       AlignWithMargins = True
@@ -174,7 +168,6 @@ object FormDemoMain: TFormDemoMain
       Align = alTop
       Caption = 'TEnum<> Demo'
       TabOrder = 5
-      ExplicitTop = 342
     end
     object btnNullableDemo: TButton
       AlignWithMargins = True
@@ -185,7 +178,6 @@ object FormDemoMain: TFormDemoMain
       Align = alTop
       Caption = 'Nullable<> Demo'
       TabOrder = 6
-      ExplicitTop = 373
     end
     object btnTupleDemo: TButton
       AlignWithMargins = True
@@ -196,7 +188,6 @@ object FormDemoMain: TFormDemoMain
       Align = alTop
       Caption = 'Tuple<> Demo'
       TabOrder = 8
-      ExplicitTop = 435
     end
     object btnDemoLazyVariable: TButton
       AlignWithMargins = True
@@ -207,7 +198,6 @@ object FormDemoMain: TFormDemoMain
       Align = alTop
       Caption = 'ILazy<>: Lazy Variable'
       TabOrder = 7
-      ExplicitTop = 404
     end
   end
 end
