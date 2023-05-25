@@ -57,7 +57,7 @@ begin
   for idx := 1 to fMessages.Count-1 do
     sum := sum + MilliSecondsBetween(fMessages[idx-1], fMessages[idx]);
 
-  Result.FromMilliseconds(sum / fMessages.Count);
+  Result := TTimeSpan.FromMilliseconds(sum / (fMessages.Count-1));
 end;
 
 end.
