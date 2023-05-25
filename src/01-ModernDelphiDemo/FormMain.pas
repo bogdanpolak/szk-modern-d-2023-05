@@ -13,7 +13,8 @@ uses
   {-}
   DemoConsole,
   Demo.Generics.ThreadQueue,
-  Demo.Anonymous.DataSetForEach;
+  Demo.Anonymous.DataSetForEach,
+  Exercises.Spring4D.Base;
 
 type
   TFormDemoMain = class(TForm)
@@ -23,7 +24,6 @@ type
     btnDemoDataSetForEach: TButton;
     btnDemoEmployeeCollection: TButton;
     btnDemoWeatherDictionary: TButton;
-    btnRunTEnumDemo: TButton;
     btnNullableDemo: TButton;
     Panel1: TPanel;
     Panel2: TPanel;
@@ -36,6 +36,9 @@ type
     procedure btnDemoDataSetForEachClick(Sender: TObject);
     procedure btnDemoEmployeeCollectionClick(Sender: TObject);
     procedure btnDemoWeatherDictionaryClick(Sender: TObject);
+    procedure btnNullableDemoClick(Sender: TObject);
+    procedure btnDemoLazyVariableClick(Sender: TObject);
+    procedure btnTupleDemoClick(Sender: TObject);
   private
     fConsole: IConsole;
     fDemoThreadQueue: IDemoThreadQueue;
@@ -50,7 +53,8 @@ implementation
 
 uses
   Demo.Generics.ObjectContainer,
-  Demo.Spring4D.Collections;
+  Demo.Spring4D.Collections,
+  Demo.Spring.Nullable;
 
 { ------------------------------------------------------- }
 { RTL: Generics, Anonymous Methods }
@@ -78,9 +82,24 @@ begin
   TSpringCollectionsDemo.RunEmployeeCollection(fConsole);
 end;
 
+procedure TFormDemoMain.btnDemoLazyVariableClick(Sender: TObject);
+begin
+  TSpringBaseDemo.RunLazyVariableDemo(fConsole);
+end;
+
 procedure TFormDemoMain.btnDemoWeatherDictionaryClick(Sender: TObject);
 begin
   TSpringCollectionsDemo.RunWeatherDictionary(fConsole);
+end;
+
+procedure TFormDemoMain.btnNullableDemoClick(Sender: TObject);
+begin
+   TSpringNullableDemo.Run(fConsole);
+end;
+
+procedure TFormDemoMain.btnTupleDemoClick(Sender: TObject);
+begin
+  TSpringBaseDemo.RunTuppleDemo(fConsole);
 end;
 
 procedure TFormDemoMain.FormCreate(Sender: TObject);

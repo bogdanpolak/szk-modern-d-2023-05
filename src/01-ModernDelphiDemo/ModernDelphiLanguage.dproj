@@ -106,6 +106,8 @@
         <DCCReference Include="Demo.Generics.ThreadQueue.pas"/>
         <DCCReference Include="Demo.Anonymous.DataSetForEach.pas"/>
         <DCCReference Include="Demo.Spring4D.Collections.pas"/>
+        <DCCReference Include="Demo.Spring.Nullable.pas"/>
+        <DCCReference Include="Exercises.Spring4D.Base.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

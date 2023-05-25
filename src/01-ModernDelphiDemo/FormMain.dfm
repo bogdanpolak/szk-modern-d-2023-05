@@ -41,7 +41,7 @@ object FormDemoMain: TFormDemoMain
       Font.Style = [fsBold]
       ParentBackground = False
       ParentFont = False
-      TabOrder = 9
+      TabOrder = 8
     end
     object btnDemoThreadedQueue: TButton
       AlignWithMargins = True
@@ -84,7 +84,7 @@ object FormDemoMain: TFormDemoMain
       Font.Style = [fsBold]
       ParentBackground = False
       ParentFont = False
-      TabOrder = 10
+      TabOrder = 9
     end
     object Panel3: TPanel
       AlignWithMargins = True
@@ -105,7 +105,7 @@ object FormDemoMain: TFormDemoMain
       Font.Style = [fsBold]
       ParentBackground = False
       ParentFont = False
-      TabOrder = 12
+      TabOrder = 11
     end
     object btnDemoDataSetForEach: TButton
       AlignWithMargins = True
@@ -137,7 +137,7 @@ object FormDemoMain: TFormDemoMain
       Font.Style = [fsBold]
       ParentBackground = False
       ParentFont = False
-      TabOrder = 11
+      TabOrder = 10
     end
     object btnDemoEmployeeCollection: TButton
       AlignWithMargins = True
@@ -161,45 +161,38 @@ object FormDemoMain: TFormDemoMain
       TabOrder = 4
       OnClick = btnDemoWeatherDictionaryClick
     end
-    object btnRunTEnumDemo: TButton
+    object btnNullableDemo: TButton
       AlignWithMargins = True
       Left = 4
       Top = 280
       Width = 177
       Height = 25
       Align = alTop
-      Caption = 'TEnum<> Demo'
-      TabOrder = 5
-    end
-    object btnNullableDemo: TButton
-      AlignWithMargins = True
-      Left = 4
-      Top = 311
-      Width = 177
-      Height = 25
-      Align = alTop
       Caption = 'Nullable<> Demo'
-      TabOrder = 6
+      TabOrder = 5
+      OnClick = btnNullableDemoClick
     end
     object btnTupleDemo: TButton
-      AlignWithMargins = True
-      Left = 4
-      Top = 373
-      Width = 177
-      Height = 25
-      Align = alTop
-      Caption = 'Tuple<> Demo'
-      TabOrder = 8
-    end
-    object btnDemoLazyVariable: TButton
       AlignWithMargins = True
       Left = 4
       Top = 342
       Width = 177
       Height = 25
       Align = alTop
-      Caption = 'ILazy<>: Lazy Variable'
+      Caption = 'Tuple<> Demo'
       TabOrder = 7
+      OnClick = btnTupleDemoClick
+    end
+    object btnDemoLazyVariable: TButton
+      AlignWithMargins = True
+      Left = 4
+      Top = 311
+      Width = 177
+      Height = 25
+      Align = alTop
+      Caption = 'ILazy<>: Lazy Variable'
+      TabOrder = 6
+      OnClick = btnDemoLazyVariableClick
     end
   end
 end
