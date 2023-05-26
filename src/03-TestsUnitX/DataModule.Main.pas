@@ -17,16 +17,37 @@ type
     fDataTimeMessageSubId: Integer;
     { Private declarations }
   public
-    function GetMessageAvgInterval: TTimeSpan;
+    function GetMessageAvgInterval(): TTimeSpan;
   end;
 
 var
   DataModuleMain: TDataModuleMain;
 
+type
+  TIntervalCalculator = class
+    class function GetAvgInterval(const aMessages: IList<TDateTime>): TTimeSpan;
+  end;
+
 implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 {$R *.dfm}
+
+class function TIntervalCalculator.GetAvgInterval(const aMessages
+  : IList<TDateTime>): TTimeSpan;
+var
+  idx: Integer;
+  sum: Double;
+begin
+  if aMessages.Count < 2 then
+    Exit(TTimeSpan.Zero);
+
+  sum := 0;
+  for idx := 1 to aMessages.Count - 1 do
+    sum := sum + MilliSecondsBetween(aMessages[idx - 1], aMessages[idx]);
+
+  Result := TTimeSpan.FromMilliseconds(sum / (aMessages.Count - 1));
+end;
 
 procedure TDataModuleMain.DataModuleCreate(Sender: TObject);
 begin
@@ -46,18 +67,8 @@ begin
 end;
 
 function TDataModuleMain.GetMessageAvgInterval: TTimeSpan;
-var
-  idx: Integer;
-  sum: Double;
 begin
-  if fMessages.Count < 2 then
-    Exit(TTimeSpan.Zero);
-
-  sum := 0;
-  for idx := 1 to fMessages.Count-1 do
-    sum := sum + MilliSecondsBetween(fMessages[idx-1], fMessages[idx]);
-
-  Result := TTimeSpan.FromMilliseconds( sum / (fMessages.Count-1) );
+  Result := TIntervalCalculator.GetAvgInterval(fMessages);
 end;
 
 end.
