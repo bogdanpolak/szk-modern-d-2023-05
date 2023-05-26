@@ -1,4 +1,4 @@
-unit Test.DataModuleMain;
+unit Test.IntervalCalculator;
 
 interface
 

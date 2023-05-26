@@ -10,11 +10,11 @@ uses
   TestInsight.DUnitX,
   {$ELSE}
   DUnitX.Loggers.Console,
-  DUnitX.Loggers.Xml.NUnit,
   {$ENDIF }
   DUnitX.TestFramework,
-  Test.DataModuleMain in 'Test.DataModuleMain.pas',
-  DataModule.Main in 'DataModule.Main.pas' {DataModuleMain: TDataModule};
+  Test.IntervalCalculator in 'Test.IntervalCalculator.pas',
+  DataModule.Main in 'DataModule.Main.pas' {DataModuleMain: TDataModule},
+  Test.DateTimeCalculator in 'Test.DateTimeCalculator.pas';
 
 {$IFNDEF TESTINSIGHT}
 var

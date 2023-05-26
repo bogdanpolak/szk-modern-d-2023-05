@@ -88,12 +88,13 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Test.DataModuleMain.pas"/>
+        <DCCReference Include="Test.IntervalCalculator.pas"/>
         <DCCReference Include="DataModule.Main.pas">
             <Form>DataModuleMain</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
+        <DCCReference Include="Test.DateTimeCalculator.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
